@@ -24,7 +24,6 @@
   foreach (arrayToObject($auth0_result) as $user_key) {
 
     print_r(get_wp_user_object($user_key->email));
-
     echo check_user($user_key);
 
     foreach ($user_key as $key=>$meta) {
@@ -50,17 +49,13 @@
 
   } // foreach (json_decode($auth0_result) as $user_key)
 
-
 ?>
 
 <script type="text/javascript">
   // jQuery(document).ready(function($) {
-  //
   //   var data = { action: 'ajax_wp_auth0_sync' };
-  //
   //   // jQuery.post("<?php echo admin_url('admin-ajax.php'); ?>", data, function(response) {
   //   //   console.log( JSON.parse(response) );
   //   // });
-  //
   // });
 </script>
